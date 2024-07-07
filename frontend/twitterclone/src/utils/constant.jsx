@@ -1,6 +1,9 @@
-
-export const USER_API_END_POINT = `${import.meta.env.VITE_BACKEND_URL}/api/v1/user`;
-export const TWEET_API_END_POINT = `${import.meta.env.VITE_BACKEND_URL}/api/v1/tweet`;
+import dotenv from "dotenv"
+dotenv.config({
+    path:"../config/.env"
+})
+export const USER_API_END_POINT = `${process.env.VITE_BACKEND_URL}/api/v1/user`;
+export const TWEET_API_END_POINT = `${process.env.VITE_BACKEND_URL}/api/v1/tweet`;
 
 export const timeSince = (timestamp) => {
   let time = Date.parse(timestamp);
